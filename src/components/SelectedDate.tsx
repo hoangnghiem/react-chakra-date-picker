@@ -13,7 +13,7 @@ export interface SelectedDateProps {
   placeholder: string
 }
 
-export const SelectedDate = ({ isFocused, date }: SelectedDateProps) => {
+export const SelectedDate = ({ isFocused, date, label, placeholder }: SelectedDateProps) => {
   const { displayFormat } = useDatepickerContext()
 
   const styleProps = useStyleProps<SelectDateStyles>({
