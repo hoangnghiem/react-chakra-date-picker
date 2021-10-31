@@ -9,6 +9,8 @@ import { getStateStyle } from '../utils/getStateStyle'
 export interface SelectedDateProps {
   isFocused: boolean
   date: InputDate
+  label: string
+  placeholder: string
 }
 
 export const SelectedDate = ({ isFocused, date }: SelectedDateProps) => {
@@ -45,10 +47,10 @@ export const SelectedDate = ({ isFocused, date }: SelectedDateProps) => {
   return (
     <Stack {...getStateStyle(styleProps.selectDateContainer, isFocused)}>
       <Text {...getStateStyle(styleProps.selectDateText, isFocused)}>
-        {phrases.datepickerStartDateLabel}
+        {label}
       </Text>
       <Text {...getStateStyle(styleProps.selectDateDateText, isFocused)}>
-        {getInputValue(date, displayFormat, phrases.datepickerStartDatePlaceholder)}
+        {getInputValue(date, displayFormat, placeholder)}
       </Text>
     </Stack>
   )

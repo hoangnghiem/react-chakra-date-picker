@@ -193,11 +193,11 @@ export const Datepicker = React.forwardRef(
             {showSelectedDates && (
               <Box mb={6}>
                 <HStack data-testid="SelectedDatesGrid">
-                  <SelectedDate date={startDate} isFocused={focusedInput === START_DATE} />
+                  <SelectedDate placeholder={phrases.datepickerStartDatePlaceholder} label={phrases.datepickerStartDateLabel} date={startDate} isFocused={focusedInput === START_DATE} />
                   <Flex justifyContent="center" alignItems="center">
                     <ArrowForwardIcon {...styleProps.arrowIcon} />
                   </Flex>
-                  <SelectedDate date={endDate} isFocused={focusedInput === END_DATE} />
+                  <SelectedDate placeholder={phrases.datepickerEndDatePlaceholder} label={phrases.datepickerEndDateLabel} date={endDate} isFocused={focusedInput === END_DATE} />
                 </HStack>
               </Box>
             )}
