@@ -14,7 +14,7 @@ export interface SelectedDateProps {
 }
 
 export const SelectedDate = ({ isFocused, date }: SelectedDateProps) => {
-  const { phrases, displayFormat } = useDatepickerContext()
+  const { displayFormat } = useDatepickerContext()
 
   const styleProps = useStyleProps<SelectDateStyles>({
     selectDateContainer: {
